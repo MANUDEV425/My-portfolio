@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #1e1e1e;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #a0a0a0;
+    line-height: 1.6 ;
+
+}
+.main-container{
+    /* display grid will make main container into parts */
+    display: grid;
+    max-width: 1200px;
+    /* background-color: #565555; */
+    /* column wise 1st column of 300px remaining other space */
+    grid-template-columns: 300px 1fr;
+    gap: 30px;
+    padding-top: 40px;
+    margin: auto;
+   
+   
+    
+}
+.sidebar{
+    height: 80vh;
+    background-color: #565555;
+     /* margin-top: 0PX; */
+    padding-top: 40px;
+    border-radius: 80px;
+
+    border :2px solid white;
+    text-align: center;
+
+
+}
+.profile{
+    text-align: center;
+}
+.main-content{
+    height: 80vh;
+    border: 2px solid white;
+    background-color: #565555;
+    border-radius: 100px;
+}
+.profile img{
+    height: 120px;
+    width: 120px;
+    border-radius: 70px;
+   align-self: center;
+}
+.profile p{
+    padding: 6px;
+    border: 6px solid #a0a0a0;
+    /* border-width: 10px; */
+    background-color: rgb(103, 193, 24);
+    color: rgb(23, 83, 135);
+    display: inline;
+    border-radius: 8px;
+}
+
+.contact{
+    margin-top: 30px;
+    border-top: 1px solid #1e1e1e;
+    /* padding: 10px 0px; */
+    /* margin: auto; */
+    margin-left: 50px;
+    margin-right: 5px;
+    width: 200px;
+    /* text-align: center; */
+}
+.value{
+    color: aliceblue;
+}
+.accounts{
+    margin-top: 30px;
+    border-top: 1px solid #1e1e1e;
+    margin-left:50px;
+    width: 200px;
+}
