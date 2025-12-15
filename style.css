@@ -45,6 +45,8 @@ body{
     border: 2px solid white;
     background-color: #212124;
     border-radius: 100px;
+
+    
 }
 .profile img{
     height: 120px;
@@ -80,4 +82,32 @@ body{
     border-top: 1px solid #1e1e1e;
     margin-left:50px;
     width: 200px;
+}
+.Skills h1 {
+    color: blanchedalmond;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+}
+     
+/* Hover effect */
+.Skills h1:hover {
+    color: #00ffd5;
+    transform: scale(0.96); 
+    text-shadow: 4px -2px 4px rgba(51, 108, 232, 0.7); 
+    cursor: pointer;
+}
+.branch:hover{
+    color: #d7c720;
+    transform: scale(0.96); 
+    text-shadow: 2px 2px 10px rgba(114, 19, 208, 0.7); 
+    cursor: pointer;
+ transition: all 0.3s ease;
+}
+.about-me:hover{
+     color: #e38812;
+    transform: scale(0.96); 
+    text-shadow: 2px 2px 10px rgba(207, 178, 64, 0.7); 
+    cursor: pointer;
+    transition: all 0.3s ease;
+
 }
