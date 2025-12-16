@@ -36,9 +36,9 @@ body{
 .sidebar{
     
     padding-top: 40px;
-    border-radius: 80px; */
+    /* border-radius: 80px; */ */
 
-    border :2px solid white;
+    /* border :2px solid white; */
     text-align: center;
     background: rgba(255,255,255,0.08);
     backdrop-filter: blur(12px);
@@ -64,8 +64,8 @@ body{
 .profile img{
      height: 120px;
     width: 120px;
-    border: solid 2px white;
-    border-radius: 50px;
+    /* border: solid 2px white; */
+    /* border-radius: 50px; */
    align-self: center; 
    border-radius: 50%;
     border: 3px solid #00f5ff;
@@ -166,8 +166,8 @@ body{
 .bkgimage img {
     width: 360px;
     border: solid 2px white;
-    border-radius: 14px;
-    box-shadow: 0 10px 30px rgba(240, 237, 237, 0.5);
+    /* border-radius: 14px; */
+    /* box-shadow: 0 10px 30px rgba(240, 237, 237, 0.5); */
     margin-right: 150px;
     box-shadow: 0 0 10px rgba(173,0,255,0.7);
      border-radius: 20px;
