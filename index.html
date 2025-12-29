@@ -1,177 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-16">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My portfolio</title>
     <link rel="stylesheet" href="style.css">
     <div></div>
-    
+
 </head>
+
 <body>
     <script>
 
         alert("Please open in desktop for better experience!!")
         alert("Welcome to my first project!!")
-        document.addEventListener("DOMContentLoaded",() => {
+        document.addEventListener("DOMContentLoaded", () => {
 
-        const outer = document.getElementById("outbkg");
-        const backgrounds = [
-            "radial-gradient(circle at top left, #1a1a2e, #000)",
-            "radial-gradient(circle at top left, #00c6ff, #141e30 70%)",
-            "radial-gradient(circle at bottom left, #1f4037 10%, #0f2027 70%)",
-            "radial-gradient(circle at top right, #ff512f, #000000 65%)",
-            "linear-gradient(135deg, #141e30, #243b55)",
-            "linear-gradient(135deg, #0f2027, #203a43, #2c5364)",
-            "radial-gradient(circle at bottom, #00ff99, #121212 70%)",
-            "linear-gradient(135deg, #000428, #004e92)",
-        ];
-        let i = 0;
-        let intervalId = null;
-        document.querySelector(".start").addEventListener("click",()=>{
-        if (intervalId !== null) return;
-        document.getElementById("click-sound").play();
-
-       
-        // if (intervalId !== null) return;
-        intervalId=setInterval(() => {
-         document.getElementById("bgmusic").play();
-        outer.style.background = backgrounds[i];
-        outer.style.transition = "background 1.5s ease-in-out";
-        i = (i + 1) % backgrounds.length;
-    }, 2000);
-});
-    let manual=0;
-    document.querySelector(".manual").addEventListener("click",()=>{
-        document.getElementById("click-sound").play();
-        outer.style.background = backgrounds[manual];
-        outer.style.transition = "background 1s ease-in-out";
-         manual = (manual + 1) % backgrounds.length;
-
-    });
-    document.querySelector(".stop").addEventListener("click",()=>{
-
-         document.getElementById("click-sound").play();
-         const bgmusic = document.getElementById("bgmusic");
-        bgmusic.pause();      
-        //   document.getElementById("bgmusic").stop();
-        clearInterval(intervalId);
-        intervalId=null;
-        document.getElementById("outbkg").style.background="radial-gradient(circle at top left, #1a1a2e, #000)"
-    });
-
-    document.querySelector(".icons").addEventListener("click",()=>{
-        document.getElementById("click-sound").play();
-    });
-
-    document.querySelector(".start").addEventListener("mouseenter",()=>{
-        document.getElementById("Text").style.display="block";
-    });
-     document.querySelector(".start").addEventListener("mouseleave",()=>{
-        document.getElementById("Text").style.display="none";
-    });
-     document.querySelector(".manual").addEventListener("mouseenter",()=>{
-        document.getElementById("Text2").style.display="block";
-    });
-    
-     document.querySelector(".manual").addEventListener("mouseleave",()=>{
-        document.getElementById("Text2").style.display="none";
-    });
-   
-   
+            const outer = document.getElementById("outbkg");
+            const backgrounds = [
+                "radial-gradient(circle at top left, #1a1a2e, #000)",
+                "radial-gradient(circle at top left, #00c6ff, #141e30 70%)",
+                "radial-gradient(circle at bottom left, #1f4037 10%, #0f2027 70%)",
+                "radial-gradient(circle at top right, #ff512f, #000000 65%)",
+                "linear-gradient(135deg, #141e30, #243b55)",
+                "linear-gradient(135deg, #0f2027, #203a43, #2c5364)",
+                "radial-gradient(circle at bottom, #00ff99, #121212 70%)",
+                "linear-gradient(135deg, #000428, #004e92)",
+            ];
+            let i = 0;
+            let intervalId = null;
+            document.querySelector(".start").addEventListener("click", () => {
+                if (intervalId !== null) return;
+                document.getElementById("click-sound").play();
 
 
-});
-    
+                // if (intervalId !== null) return;
+                intervalId = setInterval(() => {
+                    document.getElementById("bgmusic").play();
+                    outer.style.background = backgrounds[i];
+                    outer.style.transition = "background 1.5s ease-in-out";
+                    i = (i + 1) % backgrounds.length;
+                }, 2000);
+            });
+            let manual = 0;
+            document.querySelector(".manual").addEventListener("click", () => {
+                document.getElementById("click-sound").play();
+                outer.style.background = backgrounds[manual + 1];
+                outer.style.transition = "background 1s ease-in-out";
+                manual = (manual + 1) % backgrounds.length;
+
+            });
+            document.querySelector(".stop").addEventListener("click", () => {
+
+                document.getElementById("click-sound").play();
+                const bgmusic = document.getElementById("bgmusic");
+                bgmusic.pause();
+                //   document.getElementById("bgmusic").stop();
+                clearInterval(intervalId);
+                intervalId = null;
+                document.getElementById("outbkg").style.background = "radial-gradient(circle at top left, #1a1a2e, #000)"
+            });
+
+             document.querySelector(".icons").addEventListener("click", () => {
+              document.getElementById("click-sound").play();
+             });
+
+            document.querySelector(".start").addEventListener("mouseenter", () => {
+                document.getElementById("Text").style.display = "block";
+            });
+            document.querySelector(".start").addEventListener("mouseleave", () => {
+                document.getElementById("Text").style.display = "none";
+            });
+            document.querySelector(".manual").addEventListener("mouseenter", () => {
+                document.getElementById("Text2").style.display = "block";
+            });
+
+            document.querySelector(".manual").addEventListener("mouseleave", () => {
+                document.getElementById("Text2").style.display = "none";
+            });
+
+
+ });
+
 
     </script>
-        
-        <!-- <h1 style="color: rgb(240, 224, 224);text-align: center;">Hii</h1> -->
-         <!-- <div id="click-sound"></div> -->
-          <audio id="click-sound" src="click.mp3">click</audio>
-          <audio id="bgmusic" src="bgmusic.mp3"></audio>
-         <div class="outer-border" id="outbkg">
-        <div class="main-container"> 
-        <div class="sidebar">
-            <div class="profile">
-                <img  src="./my-photo.jpg" alt="photo"  >
-                 
-               
-                <h2>Manudev Sharma</h2>
-                <p style="color: #000;background: linear-gradient(135deg, #00ff99, #00ccff);  box-shadow: 0 0 12px rgba(0,255,200,0.6);padding: 6px 14px;">  <a style="color: white;" href="https://lnmiit.ac.in/">Student at LNMIIT</a>
-                    <!-- <a  href="https://lnmiit.ac.in/"></a> -->
-                </p>
-            </div>
-            <div class="contact">
-<br>
-                phone: <a class="value" href="tel:7878936011" > 7878936011 </a> 
-                <br>
-                email: <a class="value" href="mailto:manudevsharma428@gmail.com">manudevsharma428@gmail.com</a>
 
-            </div>
-            <div class="accounts">
-                <div class="buttons">
-                <button class="start">Auto</button>
-                <button class="stop">Default</button>
-                <button class="manual">Next</button>
+    <!-- <h1 style="color: rgb(240, 224, 224);text-align: center;">Hii</h1> -->
+    <!-- <div id="click-sound"></div> -->
+    <audio id="click-sound" src="click.mp3">click</audio>
+    <audio id="bgmusic" src="bgmusic.mp3"></audio>
+    <div class="outer-border" id="outbkg">
+        <div class="main-container">
+            <div class="sidebar">
+                <div class="profile">
+                    <img src="./my-photo.jpg" alt="photo">
+
+
+                    <h2>Manudev Sharma</h2>
+                    <p
+                        style="color: #000;background: linear-gradient(135deg, #00ff99, #00ccff);  box-shadow: 0 0 12px rgba(0,255,200,0.6);padding: 6px 14px;">
+                        <a style="color: white;" href="https://lnmiit.ac.in/">Student at LNMIIT</a>
+                        <!-- <a  href="https://lnmiit.ac.in/"></a> -->
+                    </p>
                 </div>
-                <h3>Click icons to see!</h3>
-                <div class="icons">
-                <a href="https://www.linkedin.com/in/manudev-sharma-b6bb3337a/">
-                <img style="text-align: center;border: solid 1px white;border-radius: 2px;color: #aaa;transition: 0.3s;" src="https://th.bing.com/th/id/ODF.F8hkx5f_DpSQJ5Rg49E4Pg?w=32&h=32&qlt=90&pcl=fffffc&o=6&cb=ucfimgc1&pid=1.2" alt="linkdin">
+                <div class="contact">
+                    <br>
+                    phone: <a class="value" href="tel:7878936011"> 7878936011 </a>
+                    <br>
+                    email: <a class="value" href="mailto:manudevsharma428@gmail.com">manudevsharma428@gmail.com</a>
+
+                </div>
+                <div class="accounts">
+                    <div class="buttons">
+                        <button class="start">Auto</button>
+                        <button class="stop">Default</button>
+                        <button class="manual">Next</button>
+                    </div>
+                    <h3 style="display: flex;justify-content: center;margin-top: 20px;">Click icons to see!</h3> 
+                     <div class="icons">
+                 <a href="https://www.linkedin.com/in/manudev-sharma-b6bb3337a/"> 
+                    <img style="text-align: center;border: solid 1px white;border-radius: 2px;color: #aaa;transition: 0.3s;" src="https://th.bing.com/th/id/ODF.F8hkx5f_DpSQJ5Rg49E4Pg?w=32&h=32&qlt=90&pcl=fffffc&o=6&cb=ucfimgc1&pid=1.2" alt="linkdin">
                 </a>
                 <!-- <a style="color: aliceblue;;" href="https://github.com/MANUDEV425" >Github</a> -->
                  <a href="https://x.com/Sha1894Sharma">
                      <img style="width: 30px;height: 30px;border: solid 1px white ;border-radius: 2px;" src="https://th.bing.com/th/id/OSK.YXwArc0x0QtkMTMJt35sBDWs-CkmrDSpA9jwk5QyK3Y?w=46&h=46&c=11&rs=1&qlt=80&o=6&cb=ucfimgc1&dpr=1.3&pid=SANGAM" alt="">
                  </a>
-               
-               
-                 <a style="color: aliceblue;" href="https://github.com/MANUDEV425" >
+
+
+                    <a style="color: aliceblue;" href="https://github.com/MANUDEV425" >
                      <img style="border: solid 1px white;border-radius: 2px;" src="https://th.bing.com/th/id/ODF.bYAvaN8MCaSZfP0o7q_Z_w?w=32&h=32&qlt=90&pcl=fffffc&o=6&cb=ucfimgc1&pid=1.2" alt="github" >
                  </a>
-                 </div>
-                
+                 </div> 
+                  
+
+
+
+                </div>
+            </div>
+            <div class="main-content">
+                <h1
+                    style="background-color: rgb(238, 228, 239);margin-left: 360px;inline-size:100px;;border-radius: 10px;border-color: rgb(245, 243, 243);margin-top: 50px;font-family:Arial, Helvetica, sans-serif;color: #1e1e1e;">
+                </h1>
+                <div class="about-me">
+                    <h1 style="color: blanchedalmond; margin-left: 10px; ">About me➡️ <br>
+                        <p style="color: aliceblue; margin-left: 10px;">I am Manudev Sharma, 1st year student at LNMIIT
+                            and member of CIPHER, Sankalp and The Literary Committee of LNMIIT.</p>
+                    </h1>
+                </div>
+                <div class="lowerpart">
+
+                    <div class="skills-branch">
+                        <div class="skills">
+                            <h1 class="section-title" style="margin-left: 10px;">Skills
+                                <p>-HTML, CSS</p>
+                                <p>-C language</p>
+                                <p>-JavaScript</p>
+                            </h1>
+                        </div>
+                        <div class="branch">
+                            <h1 class="section-title">Branch</h1>
+                            <p class="branch-text">CCE</p>
+                        </div>
+                    </div>
+
+                    <div class="bkgimage">
+                        <img src="https://cdn2.fptshop.com.vn/unsafe/Uploads/images/tin-tuc/172148/Originals/web3-3.jpg"
+                            alt="tech image">
+                    </div>
+                    <!-- <button><a href=""></a></button> -->
+                    <div id="Text" style="display:none; position: absolute; top:-30px; right:98%;white-space: nowrap;">
+                        click to start bkg audio and to automate color changing </div>
+                    <div id="Text2" style="display:none; position: absolute; top:-30px; right:105%;white-space: nowrap;">
+                        click to change background colour </div>
+
+                </div>
+
+
 
             </div>
-        </div>
-        <div class="main-content">
-             <h1 style="background-color: rgb(238, 228, 239);margin-left: 360px;inline-size:100px;;border-radius: 10px;border-color: rgb(245, 243, 243);margin-top: 50px;font-family:Arial, Helvetica, sans-serif;color: #1e1e1e;"></h1> 
-            <div class="about-me">
-                <h1 style="color: blanchedalmond; margin-left: 10px; ">About me➡️ <br>
-                <p style="color: aliceblue; margin-left: 10px;">I am Manudev Sharma, 1st year student at LNMIIT and member of CIPHER, Sankalp and The Literary Committee of LNMIIT.</p></h1>
-            </div>
- <div class="lowerpart">
 
-    <div class="skills-branch">
-        <div class="skills">
-        <h1 class="section-title" style="margin-left: 10px;">Skills
-        <p>HTML, CSS</p>
-        <p>C language</p>
-        </h1>
-        </div>
-        <div class="branch">
-        <h1 class="section-title">Branch</h1>
-        <p class="branch-text">CCE</p>
+
         </div>
     </div>
 
-    <div class="bkgimage">
-        <img src="https://cdn2.fptshop.com.vn/unsafe/Uploads/images/tin-tuc/172148/Originals/web3-3.jpg" alt="tech image">
-    </div>
-    <!-- <button><a href=""></a></button> -->
-     <div id="Text" style="display:none; position: absolute; top:-30px; left:50%;white-space: nowrap;">click to start bkg audio and to automate color changing </div>
-     <div id="Text2" style="display:none; position: absolute; top:-30px; left:50%;white-space: nowrap;">click to change background colour </div>
 
-</div>
-
-
-           
-        </div>
-
-           
-      </div>
-      </div>
-
-    
 </body>
+
 </html>
